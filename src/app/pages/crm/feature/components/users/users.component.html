@@ -1,0 +1,20 @@
+
+
+<table style="width: 100%;" border="1" [ngStyle]="{'background-color':bgColor}">
+    <thead>
+        <tr>
+            <th>
+                Ad
+            </th>
+            <th>
+                Soyad
+            </th>
+        </tr>
+    </thead>
+    <tbody style="text-align: center;">
+        <tr *ngFor="let user of users">
+            <td>{{user.name}}</td>
+            <td>{{user.surname}}</td>
+        </tr>
+    </tbody>
+</table>
