@@ -35,10 +35,8 @@ export class LoginComponent implements OnInit {
       } else {
         console.log('loginedIn', response);
         this.router.navigateByUrl(response.redirect)
-
       }
     });
-
   }
 
 }
