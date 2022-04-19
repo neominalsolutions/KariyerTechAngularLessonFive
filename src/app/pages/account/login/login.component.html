@@ -1,0 +1,8 @@
+
+<form [formGroup]="loginForm" (submit)="Login()">
+    <input formControlName="email" type="email" placeholder="email">
+    <br>
+    <input formControlName="password" type="password" placeholder="password">
+    <br>
+    <input [disabled]="!loginForm.valid" type="submit" value="Oturum Aç">
+</form>
