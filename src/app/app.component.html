@@ -11,4 +11,14 @@
 &nbsp;
 <a routerLink="/account/login">Login pages</a>
 
+<!-- <div *ngIf=""></div>
+<div [hidden]="true"></div> -->
+
+<!-- Hem varolan bir html elementine directive uygulayabiliriz hemde var olan kendi geliştirimiş olduğumuz bir componente directive uygulayabiliriz. -->
+
+<div appHighlightText [visible]="false">Merhaba</div>
+<p appHighlightText [visible]="true" [content]="'Deneme'">Merhaba 2</p>
+
+<app-my-button appHighlightText [visible]="true"></app-my-button>
+
 <router-outlet></router-outlet>
