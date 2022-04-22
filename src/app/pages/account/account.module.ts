@@ -5,8 +5,9 @@ import { AccountRoutingModule } from './account-routing.module';
 import { AccountComponent } from './account.component';
 import { LoginComponent } from './login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import {HttpClientModule} from '@angular/common/http';
+import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
 import { LoginService } from './login/login.service';
+import { TokenInterceptor } from 'src/app/interceptors/token.interceptor';
 
 
 @NgModule({
@@ -21,6 +22,11 @@ import { LoginService } from './login/login.service';
     HttpClientModule
   ],
   providers:[
+    {
+      provide:HTTP_INTERCEPTORS,
+      useClass:TokenInterceptor,
+      multi:true
+    },
     LoginService
   ]
 })
